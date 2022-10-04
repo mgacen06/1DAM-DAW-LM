@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>04 de OCT</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <a href="https://imfsmartcampus.imf.com/" ><li>Inicio</li></a>
+                <a href="ficheros/hola.html" ><li>Contacto</li></a>
+            </ul>
+        </nav>
+        <main>
+            <!-- Etiqueta form para los formularios -->
+            <form method="" action="">
+                <!-- Etiqueta label para nombre o seccion  -->
+                <label>Nombre
+                    <!-- Etiqueta input para elemento del formulario  -->
+                    <!-- Placeholder como atributo introduce un texto semi visible.
+                    Se elimina cuando escribes -->
+                    <input placeholder="Pon tu nombre" type="text" name="" id="" required>
+                </label>
+                <!-- Etiqueta br realiza salto de linea -->
+                <br>
+                <label>Email
+                    <input placeholder="Pon tu email" type="email" name="" id="">
+                </label>
+                <br>
+                <label>Telefono
+                    <input placeholder="Pon tu telefono: +34 XXX XXX XXX" type="tel" name="" id="">
+                </label>
+                <br>
+                <label>Fecha de nacimiento
+                    <input type="date" name="" id="">
+                </label>
+                <br>
+                <label>Color
+                    <input type="color" name="" id="">
+                </label>
+                <br>
+                <label>Turno <br>
+                    <input type="radio" name="turno" id=""> Mañana
+                    <input type="radio" name="turno" id=""> Tarde
+                </label>
+                <br>
+
+                <!-- Atributos especiales (VAN AL FINAL DE LA ETIQUETA DE APERTURA):
+                - hidden: oculta el elemento
+                - disabled: desactiva el elemento (NO ES POSIBLE ESCRIBIR)
+                - readonly: propiedad de solo lectura (puedo seleccionar pero se envia vacio)
+                - required: campo obligatorio -->
+                <label>Modulo favorito <br>
+                    <select name="" id="">
+                        <option readonly>Elige tu modulo...</option>
+                        <option>Bases de Datos</option>
+                        <option>Entornos de Desarrollo</option>
+                        <option>Formacion y Orientacion Laboral</option>
+                    </select>
+                </label>
+                <br>
+                <br>
+                <label>¿Por qué?
+                    <textarea placeholder="Pon tu nombre" rows="10" cols="50" name="" id=""></textarea>
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="" id=""> Acepto las condiciones de uso
+                </label>
+                <br>
+                <!-- Etiqueta button para crear un boton
+                - type="button": boton normal
+                - type="reset": borra los campos del formulario
+                - type="submit": envia los datos del formulario -->
+                <button type="button">Boton normal</button>
+                <button type="reset">Borrar datos</button>
+                <button type="submit">Enviar datos</button>
+            </form>
+        </main>
+    </body>
+</html>
