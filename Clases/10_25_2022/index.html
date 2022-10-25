@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Octubre</title>
+    <style>
+        /*
+            8.a)
+            Tipos de selectores:
+            - universal                         *{}
+            - etiqueta                          etiqueta {}
+            - clase                             .clase {}
+            - id                                #id {}
+            - atributo                          [atributo]
+            - atributo con valor                [atributo = valor]
+        */
+        *{
+            background-color: grey;
+        }
+
+        section{
+            width: 200px;
+            height: 200px;
+        }
+
+        .rgb{
+            background-color: rgba(247, 248, 244, 1.0);
+        }
+
+        .hexa{
+            background-color: #f1d0f858;
+        }
+
+        [class="hexa"]{
+            color: blue;
+        }
+        #imagen1{
+            width: 100px;
+        }
+        #imagen2{
+            width: 100px;
+        }
+        #imagen3{
+            width: 100px;
+        }
+
+        #imagen1[src="img/mandarina.jpg"]{
+            display: none;
+        }
+
+        #imagen2[src$="jpg"]{
+            width: 50px;
+        }
+
+        .miguel{
+            color:aqua;
+        }
+
+        .lucia{
+            background-image: url('img/pelota1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="rgb miguel">
+            <p>SOY DE LA CLASE RGB</p>
+            <img id="imagen1" src="img/mandarina.jpg">
+        </section>
+        <section class="hexa">
+            <p>SOY DE LA CLASE HEXA</p>
+            <img id="imagen3" src="img/mandarina.jpg">
+        </section>
+        <section class="hexa lucia">
+            <p>SOY DE LA CLASE HEXA</p>  
+        </section>
+    </main>
+</body>
+</html>
