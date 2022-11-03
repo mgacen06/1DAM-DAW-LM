@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="imf.ico">
+    <style>
+        .btn{
+            padding:10px;
+            border-radius: 50%;
+        }
+
+        [class="btn-distinto"]{
+            padding:10px;
+            /* border-radius: top-left top-right bottom-right bottom-left */
+            border-radius: 10% 20% 30% 40%;
+        }
+
+        #imagen-imf{
+            filter: contrast(200%) brightness(200%) opacity(50%);
+        }
+
+        .casa{
+            text-decoration-line: underline;
+            text-decoration-color: red;
+            text-decoration-style: solid;
+        }
+
+        .triste{
+            text-decoration-line: overline;
+            text-decoration-color: grey;
+            text-decoration-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- Transformar a .ico https://imagen.online-convert.com/es/convertir-a-ico -->
+    <button>Enviar</button>
+    <button class="btn">Enviar</button>
+    <button class="btn-distinto">Enviar</button>
+    <br>
+    <img src="img/imf.png">
+    <img id="imagen-imf" src="img/imf.png">
+    <p class="casa">Hola me quiero ir a casa</p>
+    <p class="triste">Hola me teneis triste</p>
+    <label>
+        Modulos
+        <input
+            type="text"
+            list="codigos-modulos">
+
+            <datalist id="codigos-modulos">
+                <option value="BD">Base de datos</option>
+                <option value="ED">Entornos de desarrollo</option>
+                <option value="PR">Programacion</option>
+                <option value="LM">Lenguajes de marcas</option>
+            </datalist>
+    </label>
+</body>
+</html>
