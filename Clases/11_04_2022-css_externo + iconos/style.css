@@ -1,0 +1,20 @@
+p {
+    color:green;
+    background-color: black;
+}
+
+.sergio{
+    color:blue;
+}
+
+.cosa{
+    font-size: xx-large;
+}
+
+.miguel{
+    margin: 50px;
+}
+
+i[class="fab fa-twitter"]{
+    color:red;
+}
