@@ -1,0 +1,50 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+    overflow: auto;
+}
+
+section{
+    flex-basis: 100px;
+    flex-grow: 1;
+    /* width: 100px; */
+    height: 50px;
+    border: 1px solid red;
+    overflow: auto;
+
+    /* Genero en mi section un flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+section[class="crece"]{
+    flex-grow: 10;
+}
+
+section[class="encoge"]{
+    flex-shrink: 2;
+}
+
+section span[class="palabra"]{
+    color: blue;
+}
+
+div{
+    /* Son mis elementos hijo del flexbox con mi section */
+    flex-basis: 20px;
+    height: 10px;
+    border: 1px solid grey;
+}
+
+details{
+    border: 1px solid brown;
+}
