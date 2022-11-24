@@ -1,0 +1,71 @@
+/* 
+    PSEUDOCLASES 
+    :checked  ---> Aplica estilo si el selector coincide con un <input> marcado (radio y checkbox) o para un <option>.
+    :enabled  ---> Aplica estilo a los elementos habilitados (sin el atributo "disabled").
+    :disabled ---> Aplica estilo a los elementos desabilitados (con el atributo "disabled")
+    :required ---> Aplica estilo solo si el elemento <input> tiene un atributo "required".
+
+    PSEUDOELEMENTOS
+    ::placeholder --->  selecciona elementos con el atributo "placeholder" para darle estilos al texto.
+
+    ::after       --->  inserta algo DESPUES del contenido de cada elemento seleccionado.
+                        Se utiliza la propiedad content("CONTENIDO") para especificar el contenido que se va a insertar.
+
+    ::before      --->  inserta algo ANTES del contenido de cada elemento seleccionado.
+                        Se utiliza la propiedad content("CONTENIDO") para especificar el contenido que se va a insertar.
+
+    ::first-letter--->  selector que se utiliza para agregar estilo a la primera letra del selector especificado.
+                        Se pueden usar las siguientes propiedades:
+                        - Propiedades de fuente
+                        - Propiedades de color 
+                        - Propiedades de background 
+                        - Propiedades de margin 
+                        - Propiedades de padding 
+                        - Propiedades de border 
+                        - Propiedades de text-decoration
+                        - Propiedades de text-transform
+                        - Propiedades de line-height
+                        - Propiedades de float
+                        - Propiedades de clear
+
+    ::first-line  --->  selector que se utiliza para agregar estilo a la primera linea del selector especificado.
+                        Se pueden usar las siguientes propiedades:
+                        - Propiedades de fuente
+                        - Propiedades de color 
+                        - Propiedades de background 
+                        - Propiedades de word-spacing
+                        - Propiedades de letter-spacing
+                        - Propiedades de text-decoration
+                        - Propiedades de vertical-align
+                        - Propiedades de text-transform
+                        - Propiedades de line-height
+                        - Propiedades de clear
+    
+    ::selection   --->  relaciona una porcion de elemento seleccionado por el usuario.
+*/
+body input:checked{
+    display:none;
+}
+body select option:disabled{
+    color:red;
+}
+body input::placeholder{
+    color:red;
+}
+body input:required{
+    
+}
+body h1::selection{
+    color: yellow;
+    background-color: red;
+}
+h1::first-letter{
+    font-size: 100px;
+    color: blue;
+}
+p:hover::after{
+    content:"UNA COSA POR AQUI";
+}
+p::before{
+    content:"OTRA COSA POR ACÁ";
+}
