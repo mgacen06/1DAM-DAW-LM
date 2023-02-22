@@ -82,13 +82,13 @@ let pokemons = [
     nivel: 25,
     tipo: "Electrico",
     estadisticas: {
-    ataque: 55,
-    defensa: 40,
-    velocidad: 90,
+      ataque: 55,
+      defensa: 40,
+      velocidad: 90,
     },
     evolucion: function () {
-    this.nombre = "Raichu";
-    this.tipo = "Electrico";
+      this.nombre = "Raichu";
+      this.tipo = "Electrico";
     },
 },
 {

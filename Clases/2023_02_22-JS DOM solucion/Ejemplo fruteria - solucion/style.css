@@ -1,0 +1,44 @@
+
+.caja{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.cajaProducto{
+    width: 20vw;
+    height: 100%;
+
+    border: 1px solid black;
+}
+
+.container{
+    width: 98vw;
+    border: 3px solid red;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+progress[class="green"]::-webkit-progress-value,
+progress[class="green"]::-moz-progress-bar{
+    background-color: green;
+}
+
+progress[class="yellow"]::-webkit-progress-value,
+progress[class="yellow"]::-moz-progress-bar{
+    background-color: yellow;
+}
+
+progress[class="red"]::-webkit-progress-value,
+progress[class="red"]::-moz-progress-bar{
+    background-color: red;
+}
