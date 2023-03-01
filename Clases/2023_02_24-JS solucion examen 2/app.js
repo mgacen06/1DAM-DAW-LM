@@ -3,7 +3,7 @@ let h1, div, p, card, descripcion, ul, li, coment, h3, h5, h6;
 
 /**
  * Funcion principal para pintar elementos en HTML
- * @param {Object} tipo - Contiene uno de los cuatro objetos que se van a pintar
+ * @param {String} tipo - Contiene uno de los cuatro objetos que se van a pintar
  */
 function pintar(tipo){
     section_style(sections);
@@ -46,6 +46,7 @@ function pintar(tipo){
 function section_style(sections){
     for(let section = 0; section < sections.length; section++){
         sections[section].classList.add('container');
+        // sections[section].setAttribute('class', 'container');
         sections[section].replaceChildren();
     }
 }
@@ -53,7 +54,7 @@ function section_style(sections){
 /**
  * Funcion que configura los titulos para todos las las categorias
  * @param {Array} objeto - Contiene uno de los cuatro objetos posibles
- * @returns 
+ * @returns {Object} h1
  */
 function titulo(objeto){
     h1 = document.createElement('h1');
@@ -66,7 +67,6 @@ function titulo(objeto){
 /**
  * Funcion que inserta todos los productos en su seccion correspondiente de productos.
  * @param {Object} objeto 
- * @returns 
  */
 function productos(objeto){
     let productos = objeto['productos'];
@@ -116,7 +116,6 @@ function productos(objeto){
 /**
  * Funcion que inserta todos los productos en su seccion correspondiente de comentarios.
  * @param {Object} objeto 
- * @returns 
  */
 function comentarios(objeto){
     let productos = objeto['productos'];

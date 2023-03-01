@@ -5,7 +5,7 @@ let nav;
 
 nav = document.createElement('nav');
 nav.classList.add('nav');
-body.insertBefore(nav, main);
+body.insertBefore(nav, main); 
 
 ul = document.createElement('ul');
 
