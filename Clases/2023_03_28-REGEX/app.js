@@ -164,10 +164,23 @@ function ej5(){
     /**
      * EJEMPLOS
      * -    longitud                    ---> /^.{8,}$/;
-     * -    numero de telefono movil    ---> /^[67]\d{2}\s\d{3}\s\d{3}$/;
-     * -    cuenta bancaria             --->
-     * Elementos agrupados
-     * grupos de elementos
+     * -    numero de telefono movil    ---> /^[+]34[67]\d{2}\s\d{3}\s\d{3}$/;
+     * -    cuenta bancaria             ---> /^ES\d{2}\s\d{4}\s\d{4}\s\d{2}\s\d{10}$/
+     * -    fecha                       ---> /^\d{1,2}[-/]\d{1,2}[-/]\d{4}$/   si quiero elegir entre  - ó / ----> /^(\d{1,2}[-]\d{1,2}[-]\d{4})|(\d{1,2}[/]\d{1,2}[/]\d{4})$/
+     * -    url                         ---> /^https?:[/]{2}w{3}\.\S+[.][a-z]{2,}$/;
+     *                                         https : // www    . google. es
+     *                                         Para poner el punto da igual \. ó [.]
+     * -    contraseña (para proyecto): 
+     *      + Una mayuscula
+     *      + Una minuscula
+     *      + Dos digitos seguidos
+     *      + Un signo de los siguientes  - _ . + @
+     *      + longitud mayor a 10
+     * 
+     * -    email (para proyecto): ______@_____.___
+     *      + tramo 1: no espacios ni arroba
+     *      + tramo 2: no espacios
+     *      + tramo 3: no numeros y no espacios. Longitud mayor a 1
      */
 
     let span = formularios[3].getElementsByTagName('label')[0].getElementsByTagName('span')[0];
@@ -175,8 +188,7 @@ function ej5(){
     let value = formularios[3]['elements']['text']['value'];
 
     // 2. Expresion a evaluar
-    // Longitud mayor a 8
-    let expresion = /^[+]34\s[67]\d{2}\s\d{3}\s\d{3}$/;
+    let expresion = /(?=.*[a-z])(?=.*\d{2})(?=.*[-_+.])/;
 
     // 3. Evaluar
     if(expresion.test(value)){

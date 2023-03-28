@@ -35,3 +35,4 @@ Grupos
     |       - Uno u otro
 
 Otros elementos
+    (?=.*ALGO) - ALGO sea un elemento que este contenido en algun punto de la cadena a validar
