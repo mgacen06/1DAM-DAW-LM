@@ -1,0 +1,8 @@
+<!ELEMENT coches (coche+)>
+<!ELEMENT coche (marca, modelo?, precio)>
+<!ATTLIST coche
+          class CDATA #FIXED
+          id CDATA #REQUIRED>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>

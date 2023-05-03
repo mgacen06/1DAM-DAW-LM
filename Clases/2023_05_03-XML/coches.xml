@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<coches>
+  <coche id="1" class="ford">
+    <marca>Ford</marca>
+    <modelo>Fiesta</modelo>
+    <precio>15000</precio>
+  </coche>
+  <coche id="2">
+    <marca>Ford</marca>
+    <precio>15000</precio>
+  </coche>
+</coches>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imf>
+    <!-- Esto es un comentario -->
+    <aulas>
+    
+    </aulas>
+    <personal>
+        <profesores>
+    
+        </profesores>
+    </personal>
+    <alumnos>
+        <alumno id="1">
+            <nombre>Miguel</nombre>
+            <apellidos>Topo</apellidos>
+            <fecha_nacimiento>2008-08-06</fecha_nacimiento>
+            <direccion>Av. Miguel Topo, 2º B.C. 7º C.A. 6º</direccion>
+            <telefono>91345678</telefono>
+        </alumno>
+        <alumno id="2">
+            <nombre>Alfonso</nombre>
+            <apellidos>Guay</apellidos>
+            <fecha_nacimiento>2001-09-06</fecha_nacimiento>
+            <direccion>Av. Miguel Topo, 3º B.C. 7º C.A. 6º</direccion>
+            <telefono>91345698</telefono>
+        </alumno>
+        <alumno id="3">
+            <nombre>Jorge</nombre>
+            <apellidos>Sanchez</apellidos>
+            <fecha_nacimiento>2002-10-16</fecha_nacimiento>
+            <direccion>Av. Miguel Topo, 4º B.C. 7º C.A. 6º</direccion>
+            <telefono></telefono>
+        </alumno>
+    </alumnos>
+</imf>
