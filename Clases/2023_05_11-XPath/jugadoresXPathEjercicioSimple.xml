@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plantilla>
+	<jugador>
+		<name>Cristiano Ronaldo</name>
+		<apellido1>Dos Santos</apellido1>
+		<apellido2>Aveiro</apellido2>
+		<dni pais="pt">11223344PT</dni>
+		<pais lang="en">Portugal</pais>
+		<fechaNacimiento>5/02/1985</fechaNacimiento>
+		<numMundiales>0</numMundiales>
+	</jugador>
+	<jugador>
+		<name>Lionel</name>
+		<apellido1>Messi</apellido1>
+		<apellido2 />
+		<dni pais="ar">175493344AR</dni>
+		<pais lang="es">Argentina</pais>
+		<fechaNacimiento>24/06/1987</fechaNacimiento>
+		<numMundiales regalado="si">1</numMundiales>
+	</jugador>
+	<jugador>
+		<name>Frank</name>
+		<apellido1>Lampard</apellido1>
+		<apellido2 />
+		<dni pais="en">175493344EN</dni>
+		<pais lang="en">England</pais>
+		<fechaNacimiento>20/06/1978</fechaNacimiento>
+		<numMundiales>0</numMundiales>
+	</jugador>
+	<jugador>
+		<name>Frank</name>
+		<apellido1>Ribery</apellido1>
+		<apellido2 />
+		<dni pais="fr">951793344FR</dni>
+		<pais lang="en">France</pais>
+		<fechaNacimiento>7/04/1983</fechaNacimiento>
+		<numMundiales>0</numMundiales>
+	</jugador>
+	<jugador>
+		<name>Gianluigi</name>
+		<apellido1>Buffon</apellido1>
+		<apellido2 />
+		<dni pais="it">175493344IT</dni>
+		<pais lang="en">Italy</pais>
+		<fechaNacimiento>21/01/1978</fechaNacimiento>
+		<numMundiales>1</numMundiales>
+	</jugador>
+	<jugador>
+		<name>Toni</name>
+		<apellido1>Kroos</apellido1>
+		<apellido2 />
+		<dni pais="gm">2954493344GM</dni>
+		<pais lang="en">Germany</pais>
+		<fechaNacimiento>4/01/1990</fechaNacimiento>
+		<numMundiales>1</numMundiales>
+	</jugador>
+</plantilla>
