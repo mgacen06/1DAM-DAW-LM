@@ -1,22 +1,16 @@
-<?php
-/**
- * Este fichero contiene el formulario para insertar un nuevo coche
- */
+<?php 
+// $_GET['nombre'] --> recoge el valor de la variable 'nombre' de la URL
+// Ejemplo: http://localhost/php/delete.php?id=2
 
-// 1. Recoger el id del coche que vamos a actualizar 
+// 1. Recoger el id de la url. 
+// 1.1 Ver si existe y en tal caso recogerlo.
+$id = $_GET['id'];
 
-if(isset($_GET['id'])){
-    $id = $_GET['id'];
+// 2. Importar la clase Database.php
+require_once('Database.php');
 
-     //2.  Importar la clase Database para poder usar sus funciones
-     require_once ('Database.php');
-
-     // Realizar un nuevo objeto de la clase Database para usar la funcion getById
-     $database = new Database();
-
-     // 4. Llamar a la funcion getById para recoger los elementos del coche con esa ID
-    $coche = $database->getById($id); // Retorna los datos del coche correspodiente
-}
+// 3. Invocar la funcion findById de la clase Database.php
+$coche = Database::findById($id);
 
 ?>
 
@@ -27,16 +21,15 @@ if(isset($_GET['id'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>ESTAMOS EN EL EDIT.PHP</h1>
     <form action="update.php" method="POST">
-        <input type="hidden" value="<?php echo $coche['id']?>" name="id">     
-        <input type="text" value="<?php echo $coche['marca']?>" name="marca" placeholder="Introduce la marca"> 
-        <input type="text" value="<?php echo $coche['modelo']?>" name="modelo" placeholder="Introduce el modelo">
-        <input type="text" value="<?php echo $coche['precio']?>" name="precio" placeholder="Introduce el precio">
-        <button type="submit">Enviar</button>     
+        <input type="hidden" name="id" value="<?php echo $coche['id'] ?>">
+        <input type="text" name="marca" value="<?php echo $coche['marca'] ?>" placeholder="Actualiza la marca">
+        <input type="text" name="modelo" value="<?php echo $coche['modelo'] ?>" placeholder="Actualiza el modelo">
+        <input type="text" name="precio" value="<?php echo $coche['precio'] ?>" placeholder="Actualiza el precio">
+        <button type="submit">Enviar</button>
     </form>
 </body>
 </html>

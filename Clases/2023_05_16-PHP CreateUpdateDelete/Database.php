@@ -1,22 +1,22 @@
 <?php
 
-    class Database {
+    class Database{
 
         /**
-         * Funcion que realiza la configuracion de la 
-         * conexion a la base de datos
+         * SE ENCARGA DE LA CONEXION
          */
-        public function conectar(){
-            $driver = "mysql";      // Que tipo de base de datos voy a utilizar.
-            $host = 'localhost';    // 127.0.0.1
+        public static function conectar(){
+            $driver = 'mysql';
+            $host='127.0.0.1';
             $port = '3307';
-            $bd = 'abr13';
-            $user = 'root';         // Esto tiene que cambiar, se crea uno nuevo con permisos.
-            $password =  "";        // Esto tambien cambia
-
-            $dsn = "$driver:dbname=$bd;host=$host;port=$port";
-
+            $user='root';
+            $password = '';
+            $db = 'grupob';
+            
+            $dsn = "$driver:dbname=$db;host=$host;port=$port";
+            
             try {
+                // La variable $gbd tiene toda la configuracion de la conexion
                 $gbd = new PDO($dsn, $user, $password);
                 echo 'Conectado correctamente';
             } catch (PDOException $e) {
@@ -26,66 +26,52 @@
             return $gbd;
         }
 
-        /**
-         * Funcion que recoge todos los datos de una tabla
-         * En este caso de la tabla coches.
-         */
-        public function getAll($tabla){
-            $sql = "SELECT * FROM $tabla";
-            $resultados = self::conectar()->query($sql);
-            return $resultados;
-        }
-
-        /**
-         * Funcion que recibe un $id y borra el elemento
-         * que tiene dicho $id
-         */
-        public function delete($tabla, $id){
-            $sql = "DELETE FROM $tabla WHERE id = $id";
-            self::conectar()->query($sql);
-        }
-
-        /**
-         * Funcion que inserta una nueva fila en la BD de coches
-         */
-        public function save($valores){
+        public static function getAll(){
             /**
-             * $valores [
-             *  0 --> marca,
-             *  1 --> modelo,
-             *  2 --> precio
-             * ]
+             * 1. Conecta
+             * 2. Realizo la query
              */
-            $sql = "INSERT INTO coches (marca, modelo, precio) VALUES ('$valores[0]', '$valores[1]', $valores[2])";
-            // echo $sql;
-            // exit();
+            $sql = "SELECT * FROM coches";
+            $resultado = self::conectar()->query($sql);
+            return $resultado;
+        }
+
+        /**
+         * Funcion que elimina un coche por id
+         */
+        public static function delete($id){
+            $sql = "DELETE FROM coches WHERE id = $id";
             self::conectar()->exec($sql);
         }
 
         /**
-         * Funcion que filtra un coche por una id que recibe por parametro
+         * Funcion que inserta un coche nuevo en la BD
+         * Los elementos del coche vienen en el parametro $datos
+         * $datos = [marca, modelo, precio]
          */
-        public function getById($id){
-            $sql = "SELECT * FROM coches WHERE id = $id";
-            $resultados = self::conectar()->query($sql);
-            return $resultados->fetch(PDO::FETCH_ASSOC);
+        public static function save($datos){
+            $sql = "INSERT INTO coches (marca, modelo, precio) VALUES ('$datos[0]', '$datos[1]', $datos[2])";
+            self::conectar()->exec($sql);
         }
 
-         /**
-         * Funcion que inserta una nueva fila en la BD de coches
+        /**
+         * Funcion que recibe un id por parametro y retorna su coche asociado
          */
-        public function update($valores){
-            /**
-             * $valores [
-             *  0 --> marca,
-             *  1 --> modelo,
-             *  2 --> precio
-             * ]
-             */
-            $sql = "UPDATE coches SET marca = '$valores[1]', modelo = '$valores[2]', precio = $valores[3] WHERE id = $valores[0]";
-            // echo $sql;
-            // exit();
+        public static function findbyId($id){
+            $sql = "SELECT * FROM coches WHERE id = $id";
+            $coche = self::conectar()->query($sql);
+            return $coche->fetch(PDO::FETCH_ASSOC);
+        }
+
+        /**
+         * Funcion que acutaliza los datos de un coche determinado
+         * $datos = [id, marca, modelo, precio];
+         */
+        public static function update($datos){
+            $sql = "UPDATE coches SET marca = '$datos[1]', modelo = '$datos[2]', 
+            precio = $datos[3] WHERE id = $datos[0]";
             self::conectar()->exec($sql);
         }
     }
+
 ?>

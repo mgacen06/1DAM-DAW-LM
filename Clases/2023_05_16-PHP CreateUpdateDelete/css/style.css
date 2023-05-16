@@ -1,0 +1,40 @@
+h1{
+    color: red;
+}
+
+table {
+    width: 50%;
+    background-color: beige;
+    margin-top: 10px;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    padding: 8px;
+    background-color: darkgray;
+    text-decoration: none;
+    border-radius: 10%;
+    color: white;
+    margin-bottom: 5px;
+}
+
+a:hover{
+    background-color: gray;
+    color: black;
+}
+
+form{
+    margin-top: 10px;
+}

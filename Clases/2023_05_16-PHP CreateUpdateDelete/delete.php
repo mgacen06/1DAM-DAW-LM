@@ -1,28 +1,20 @@
-<?php
-    /**
-     * OBJETIVO
-     * 
-     * 1. Recoger el id del elemento que hay que eliminar.
-     * 2. Realizar la sentencia SQL que elimina un elemento con el id recogido.
-     * 3. Devolver la vista al index
-     */
+<?php 
 
-     // 1. GET['id'] 
-     if(isset( $_GET['id'])){
-        $id = $_GET['id'];
-        echo 'HEMOS RECOGIDO EL VALOR ' . $id;
-   
-        //2.  Importar la clase Database para poder usar sus funciones
-       require_once ('Database.php');
-   
-       // Realizar un nuevo objeto de la clase Database para usar la funcion getAll
-       $database = new Database();
-       $database->delete('coches', $id);
-   
-       //3. Redireccionar al index
-       header('Location: index.php');
-     }else{
-        echo 'Error 404';
-     }
-     
+echo 'ESTAMOS EN EL DELETE.PHP';
+echo 'Hemos recogido el valor del id : '. $_GET['id'];  
+// $_GET['nombre'] --> recoge el valor de la variable 'nombre' de la URL
+// Ejemplo: http://localhost/php/delete.php?id=2
+
+// 1. Recoger el id de la url. 
+// 1.1 Ver si existe y en tal caso recogerlo.
+$id = $_GET['id'];
+
+// 2. Importar la clase Database.php
+require_once('Database.php');
+
+// 3. Invocar la funcion delete de la clase Database.php
+Database::delete($id);
+
+// 4. Retornar al index.php para ver cambios
+header('Location: index.php');
 ?>
