@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <generator>Easy Feed Editor</generator>
+        <title>NEWSLETTER</title>
+        <description>Enlace con cosas</description>
+        <link>https://www.20minutos.es/estaticos/home-newsletters/</link>
+        <copyright>Por supuesto</copyright>
+        <language>es</language>
+        <pubDate>Fri, 26 May 2023 10:15:33 GMT</pubDate>
+        <managingEditor>Sergio Fontan</managingEditor>
+
+        <item>
+            <title>20bits: una newsletter de tecnolog&#237;a, gadgets, internet y mucho m&#225;s</title>
+            <description><![CDATA[<p>
+	Newsletter de <strong>cosas</strong> de tencolog&iacute;a</p>
+]]></description>
+            <link>https://www.20minutos.es/estaticos/20bits-newsletter/</link>
+            <author>Sergio</author>
+            <category>Tecnologia</category>
+            <guid isPermaLink="false">20b8d8d5-2ebb-49f9-ac88-1f77ba28af8b</guid>
+            <pubDate>Fri, 26 May 2023 10:15:26 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Buenas Migas: disfruta de nuestra selecci&#243;n de recetas y trucos </title>
+            <description><![CDATA[<p>
+	Prueba de gastronom&iacute;a</p>
+]]></description>
+            <link>https://www.20minutos.es/estaticos/newsletter-gastronomia/</link>
+            <author>Sergio</author>
+            <category>Gastronom&#237;a</category>
+            <guid isPermaLink="false">40bc35a7-c83d-44b2-9a9e-1c7113dc87c4</guid>
+            <pubDate>Fri, 26 May 2023 10:14:39 GMT</pubDate>
+        </item>
+
+        <item>
+            <title>Cineman&#237;a: las mejores recomendaciones de series y pel&#237;culas</title>
+            <description><![CDATA[<p>
+	asdjkfgsdyujfg sdukfhsdfdhafusdhgfgoughsdghsdkbj</p>
+]]></description>
+            <link>https://www.20minutos.es/estaticos/newsletter-de-cinemania/</link>
+            <author>Sergio</author>
+            <category>Cine</category>
+            <guid isPermaLink="false">1b328057-a1cd-4786-85f3-4572d4e45267</guid>
+            <pubDate>Fri, 26 May 2023 10:13:47 GMT</pubDate>
+            <enclosure
+                url="https://phantom-elmundo.unidadeditorial.es/558ba7add49cae4f1e9f95572119e2c1/resize/550/f/webp/assets/multimedia/imagenes/2023/05/26/16850894359237.jpg"
+                type="image/jpeg" length="19714" />
+        </item>
+    </channel>
+</rss>

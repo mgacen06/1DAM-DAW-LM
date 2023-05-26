@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<generator>Easy Feed Editor</generator>
+<title>Prueba</title>
+<description>asydgausyfgauyfgaifugaefhea</description>
+<language>es</language>
+<pubDate>Fri, 26 May 2023 07:40:42 GMT</pubDate>
+<managingEditor>Sergio</managingEditor>
+
+<item>
+<title>Otra cosa</title>
+<description><![CDATA[<p>
+	asd,kusdh fiadfgh uhgcauicg aygcadfgadiucaghthui</p>
+]]></description>
+<author>Sergio</author>
+<category>Deportes</category>
+<category>Tecnologia</category>
+<category>Salud</category>
+<guid  isPermaLink="false">5fbbb01b-ffd3-46a6-990d-dba3f4180e67</guid>
+<pubDate>Fri, 26 May 2023 07:39:16 GMT</pubDate>
+</item>
+
+<item>
+<title>Nueva entrada</title>
+<description><![CDATA[<p>
+	xjxhcgsjd a<strong>sdasd</strong>as</p>
+]]></description>
+<author>Sergio</author>
+<category>Salud</category>
+<guid  isPermaLink="false">3a383bb4-637c-42d7-be57-56adeaa0daa2</guid>
+<pubDate>Fri, 26 May 2023 07:40:40 GMT</pubDate>
+</item>
+</channel>
+</rss>
